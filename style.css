@@ -45,8 +45,8 @@ nav a:hover{
 /* ================= HERO ================= */
 .hero{
     height:100vh;
-    background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)), 
-                url('https://paragsuri05-ai.github.io/Networkmedia/images/zero.jpg');
+    background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+                url('https://paragsuri05-ai.github.io/Networkmedia/images/hero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
