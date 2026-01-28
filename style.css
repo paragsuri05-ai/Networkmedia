@@ -1,9 +1,8 @@
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.78)),
-url('images/hero.jpg');   /* local image */
-
+linear-gradient(rgba(5,10,30,.75), rgba(5,10,30,.85)),
+url('images/hero.jpg');   /* <-- your new hero image */
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
@@ -13,6 +12,5 @@ align-items:center;
 justify-content:center;
 text-align:center;
 color:white;
-
-padding-top:120px; /* fixes navbar overlap */
+padding:20px;
 }
