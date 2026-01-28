@@ -1,6 +1,8 @@
-.hero{
+.hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)), url('images/hero.jpg');
+    /* Full URL to your GitHub Pages image */
+    background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)), 
+                url('https://paragsuri05-ai.github.io/Networkmedia/images/hero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,5 +16,5 @@
 
 .hero h1,
 .hero p {
-    text-shadow: 0 2px 6px rgba(0,0,0,0.7); /* makes text readable on image */
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7); /* makes text readable */
 }
