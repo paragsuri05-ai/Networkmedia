@@ -45,17 +45,11 @@ nav a:hover{
 /* ================= HERO ================= */
 .hero{
     height:100vh;
-
-    background: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)),
-                url('images/hero.jpg');
-
+    background:url('https://paragsuri05-ai.github.io/Networkmedia/images/hero.jpg');
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
+}
 }
 /* ================= SECTIONS ================= */
 .section{
@@ -169,5 +163,6 @@ footer{
         font-size:16px;
     }
 }
+
 
 
