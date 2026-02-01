@@ -12,210 +12,226 @@
 
 /* ================= GLOBAL ================= */
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#f6f8fb;
-    color:#222;
-    line-height:1.7;
+background:#0b1220;
+color:white;
+line-height:1.7;
+overflow-x:hidden;
 }
+
 
 /* ================= NAVBAR ================= */
 nav{
-    position:fixed;
-    width:100%;
-    top:0;
-    background:#0f172a;
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    padding:18px 60px;
-    z-index:1000;
+position:fixed;
+top:0;
+width:100%;
+padding:18px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(15,23,42,.85);
+backdrop-filter:blur(10px);
+
+z-index:1000;
 }
 
 nav ul{
-    display:flex;
-    gap:30px;
-    list-style:none;
+display:flex;
+gap:30px;
+list-style:none;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    font-size:14px;
+color:white;
+text-decoration:none;
+font-size:14px;
+opacity:.85;
 }
 
 nav a:hover{
-    color:#00c3ff;
+color:#00c3ff;
 }
+
 
 /* ================= HERO ================= */
 .hero{
-    height:100vh;
-    background:url('https://paragsuri05-ai.github.io/Networkmedia/images/hero.jpg');
-    background-size:cover;
-    background-position:center;
+height:100vh;
+background:url('https://paragsuri05-ai.github.io/Networkmedia/images/hero.jpg');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 }
 
-/* ================= SECTIONS ================= */
+
+/* ================= SECTION ================= */
 .section{
-    padding:110px 60px;
-    text-align:center;
-}
-
-.section.light{
-    background:white;
+padding:120px 10%;
+text-align:center;
 }
 
 .section.dark{
-    background:#0f172a;
-    color:white;
+background:#0f172a;
 }
 
 h2{
-    font-size:36px;
-    margin-bottom:25px;
+font-size:38px;
+margin-bottom:25px;
 }
 
 p{
-    max-width:900px;
-    margin:auto;
+max-width:850px;
+margin:auto;
+opacity:.85;
 }
 
-/* ================= SERVICES SPLIT LAYOUT ================= */
 
-#services{
-    text-align:left;
-}
+/* =====================================================
+   SERVICES SPLIT LAYOUT (GobbleCube Style)
+===================================================== */
 
 .services-split{
-    display:flex;
-    gap:50px;
-    margin-top:50px;
-    align-items:flex-start;
+display:flex;
+gap:40px;
+margin-top:60px;
+padding:40px;
+
+border-radius:22px;
+border:1px solid rgba(255,255,255,0.08);
+
+background:rgba(255,255,255,0.03);
+backdrop-filter:blur(6px);
 }
 
+
+/* LEFT TABS */
 .services-tabs{
-    width:320px;
-    flex-shrink:0;
-    display:flex;
-    flex-direction:column;
-    gap:18px;
+width:320px;
+flex-shrink:0;
+display:flex;
+flex-direction:column;
+gap:18px;
 }
 
+/* TAB CARD */
 .tab{
-    background:#1e293b;
-    padding:18px 22px;
-    border-radius:10px;
-    cursor:pointer;
-    transition:.3s;
+padding:18px 22px;
+border-radius:14px;
+
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.15);
+
+cursor:pointer;
+transition:.35s;
+
+color:#e2e8f0;
 }
 
+/* Hover */
 .tab:hover{
-    background:#26344f;
+transform:translateX(6px);
+border-color:#00c3ff;
+box-shadow:0 0 15px rgba(0,195,255,0.25);
 }
 
+/* Active */
 .tab.active{
-    background:#00c3ff;
-    color:black;
-    font-weight:600;
+background:linear-gradient(135deg,#00c3ff,#0088ff);
+color:black;
+font-weight:600;
+
+box-shadow:
+0 0 20px rgba(0,195,255,.5),
+0 0 40px rgba(0,195,255,.2);
 }
 
+
+/* RIGHT CONTENT CARD */
 .services-content{
-    flex:1;
-    background:#1e293b;
-    padding:40px;
-    border-radius:12px;
+flex:1;
+
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.15);
+
+border-radius:18px;
+padding:45px;
+
+text-align:left;
 }
 
 .content{
-    display:none;
+display:none;
 }
 
 .content.active{
-    display:block;
+display:block;
 }
+
 
 /* ================= BUTTON ================= */
 .btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:12px 28px;
-    background:#00c3ff;
-    color:black;
-    text-decoration:none;
-    border-radius:6px;
-    font-weight:600;
+display:inline-block;
+margin-top:25px;
+padding:12px 28px;
+
+background:linear-gradient(45deg,#00c3ff,#0088ff);
+color:black;
+
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
 }
 
-.btn:hover{
-    background:#00a2e0;
-}
 
 /* ================= CONTACT ================= */
 .contact-box{
-    font-size:18px;
-    margin-top:20px;
+margin-top:20px;
+font-size:17px;
+opacity:.9;
 }
+
 
 /* ================= FOOTER ================= */
 footer{
-    background:#111;
-    color:#aaa;
-    text-align:center;
-    padding:20px;
+background:#050a14;
+text-align:center;
+padding:25px;
+opacity:.6;
 }
 
-/* ================= ANIMATION ================= */
-.reveal{
-    opacity:0;
-    transform:translateY(40px);
-    transition:.8s;
-}
-
-.reveal.show{
-    opacity:1;
-    transform:translateY(0);
-}
 
 /* ================= RESPONSIVE ================= */
-@media(max-width:768px){
+@media(max-width:900px){
 
-    nav{
-        padding:15px 20px;
-    }
+.services-split{
+flex-direction:column;
+}
 
-    nav ul{
-        gap:15px;
-    }
+.services-tabs,
+.services-content{
+width:100%;
+}
 
-    .section{
-        padding:80px 20px;
-    }
-
-    .services-split{
-        flex-direction:column;
-    }
-
-    .services-tabs,
-    .services-content{
-        width:100%;
-    }
 }
 
 </style>
 </head>
 
+
 <body>
+
 
 <!-- ================= NAVBAR ================= -->
 <nav>
-<div><strong>Network Media Inc.</strong></div>
+<strong>Network Media Inc.</strong>
+
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
@@ -224,64 +240,75 @@ footer{
 </ul>
 </nav>
 
-<!-- ================= HOME ================= -->
+
+<!-- ================= HERO ================= -->
 <section id="home" class="hero"></section>
 
+
 <!-- ================= ABOUT ================= -->
-<section id="about" class="section light reveal">
+<section id="about" class="section">
+
 <h2>About Us</h2>
+
 <p>
-Our team can help you overcome any challenges that come with going global.
-From logistics and taxes to translation and localisation, we provide a hassle-free full-service solution.
-We help brands prepare for a digital-first approach to commerce.
-Committed to helping you Launch, Grow & Optimize your business on Marketplaces.
+We help brands scale smarter with marketplace management,
+performance marketing and deep business analytics.
+Our mission is to accelerate your growth with data-driven decisions.
 </p>
+
 </section>
+
+
 
 <!-- ================= SERVICES ================= -->
 <section id="services" class="section dark">
 
 <h2>What We Do</h2>
 
-<div class="services-split reveal">
+<div class="services-split">
 
-    <div class="services-tabs">
-        <div class="tab active" data-tab="t1">📦 Marketplace Management</div>
-        <div class="tab" data-tab="t2">📈 Performance Marketing</div>
-        <div class="tab" data-tab="t3">📊 Business Analysis</div>
-        <div class="tab" data-tab="t4">🚀 Growth Strategy</div>
-    </div>
+<div class="services-tabs">
 
-    <div class="services-content">
+<div class="tab active" data-tab="t1">📦 Marketplace Management</div>
+<div class="tab" data-tab="t2">📈 Performance Marketing</div>
+<div class="tab" data-tab="t3">📊 Business Analysis</div>
+<div class="tab" data-tab="t4">🚀 Growth Strategy</div>
 
-        <div class="content active" id="t1">
-            <h3>Marketplace Management</h3>
-            <p>Complete catalog setup, listings optimization and operations to maximize marketplace sales.</p>
-        </div>
+</div>
 
-        <div class="content" id="t2">
-            <h3>Performance Marketing</h3>
-            <p>ROI focused ads on Meta & Google that increase conversions.</p>
-        </div>
 
-        <div class="content" id="t3">
-            <h3>Business Analysis</h3>
-            <p>Data insights and reporting to scale your brand faster.</p>
-        </div>
+<div class="services-content">
 
-        <div class="content" id="t4">
-            <h3>Growth Strategy</h3>
-            <p>Structured scaling plans for consistent long-term growth.</p>
-        </div>
+<div class="content active" id="t1">
+<h3>Marketplace Management</h3>
+<p>Catalog setup, listing optimization and daily operations to maximize sales.</p>
+</div>
 
-    </div>
+<div class="content" id="t2">
+<h3>Performance Marketing</h3>
+<p>ROI focused ads on Meta & Google to drive scalable conversions.</p>
+</div>
+
+<div class="content" id="t3">
+<h3>Business Analysis</h3>
+<p>Data insights, reports and competitor tracking to unlock growth opportunities.</p>
+</div>
+
+<div class="content" id="t4">
+<h3>Growth Strategy</h3>
+<p>Structured plans and systems that help your brand grow faster and smarter.</p>
+</div>
+
+</div>
 
 </div>
 
 </section>
 
+
+
 <!-- ================= CONTACT ================= -->
-<section id="reach" class="section light reveal">
+<section id="reach" class="section">
 
 <h2>Let's Start a Partnership</h2>
 
@@ -294,24 +321,16 @@ Committed to helping you Launch, Grow & Optimize your business on Marketplaces.
 
 </section>
 
+
 <footer>
-© 2026 Network Media Inc. | All Rights Reserved
+© 2026 Network Media Inc. All Rights Reserved
 </footer>
 
+
+
+<!-- ================= SCRIPT ================= -->
 <script>
 
-/* Scroll animation */
-const reveals=document.querySelectorAll('.reveal');
-
-window.addEventListener('scroll',()=>{
-reveals.forEach(el=>{
-if(el.getBoundingClientRect().top < window.innerHeight-80){
-el.classList.add('show');
-}
-});
-});
-
-/* Services tabs */
 const tabs=document.querySelectorAll('.tab');
 const contents=document.querySelectorAll('.content');
 
@@ -326,6 +345,7 @@ document.getElementById(tab.dataset.tab).classList.add('active');
 });
 
 </script>
+
 
 </body>
 </html>
