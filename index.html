@@ -57,12 +57,11 @@ nav a:hover{
 /* ================= HERO ================= */
 .hero{
     height:100vh;
-                background:url('https://paragsuri05-ai.github.io/Networkmedia/images/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background:url('https://paragsuri05-ai.github.io/Networkmedia/images/hero.jpg');
+    background-size:cover;
+    background-position:center;
 }
-   
+
 /* ================= SECTIONS ================= */
 .section{
     padding:110px 60px;
@@ -88,313 +87,47 @@ p{
     margin:auto;
 }
 
-/* ================= GRID ================= */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    margin-top:40px;
+/* ================= SERVICES SPLIT LAYOUT ================= */
+
+#services{
+    text-align:left;
 }
-
-.card{
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-    transition:.4s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.dark .card{
-    background:#1e293b;
-    color:white;
-}
-
-/* ================= BUTTON ================= */
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:12px 28px;
-    background:#00c3ff;
-    color:black;
-    text-decoration:none;
-    border-radius:6px;
-    font-weight:600;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.btn:hover{
-    background:#00a2e0;
-}
-
-/* ================= CONTACT ================= */
-.contact-box{
-    font-size:18px;
-    margin-top:20px;
-}
-
-/* ================= FOOTER ================= */
-footer{
-    background:#111;
-    color:#aaa;
-    text-align:center;
-    padding:20px;
-}
-
-/* ================= ANIMATION ================= */
-.reveal{
-    opacity:0;
-    transform:translateY(40px);
-    transition:.8s;
-}
-
-.reveal.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width:768px){
-    nav{
-        padding:15px 20px;
-    }
-    nav ul{
-        gap:15px;
-    }
-    .section{
-        padding:80px 20px;
-    }
-    .hero h1{
-        font-size:42px;
-    }
-    .hero p{
-        font-size:16px;
-    }
-}
-    
-
-<body>
-
-    /* ===== SERVICES SPLIT LAYOUT ===== */
 
 .services-split{
-display:flex;
-gap:50px;
-margin-top:50px;
-text-align:left;
+    display:flex;
+    gap:50px;
+    margin-top:50px;
+    align-items:flex-start;
 }
 
 .services-tabs{
-width:35%;
-display:flex;
-flex-direction:column;
-gap:18px;
+    width:320px;
+    flex-shrink:0;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
 }
 
 .tab{
-background:#1e293b;
-padding:18px 22px;
-border-radius:10px;
-cursor:pointer;
-transition:.3s;
+    background:#1e293b;
+    padding:18px 22px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
 }
 
 .tab:hover{
-background:#26344f;
+    background:#26344f;
 }
 
 .tab.active{
-background:#00c3ff;
-color:black;
-font-weight:600;
+    background:#00c3ff;
+    color:black;
+    font-weight:600;
 }
 
 .services-content{
-width:65%;
-background:#1e293b;
-padding:40px;
-border-radius:12px;
-}
-
-.content{
-display:none;
-}
-
-.content.active{
-display:block;
-}
-
-@media(max-width:768px){
-.services-split{
-flex-direction:column;
-}
-.services-tabs,
-.services-content{
-width:100%;
-}
-}
-
-
-</style>
-</head>
-
-
-<!-- ================= NAVBAR ================= -->
-<nav>
-<div><strong>Network Media Inc.</strong></div>
-
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">What We Do</a></li>
-<li><a href="#reach">Reach</a></li>
-</ul>
-</nav>
-
-<!-- ================= HOME ================= -->
-<section id="home" class="hero"></section>
-
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section light reveal">
-
-<h2>About Us</h2>
-
-<p>
-Our team can help you overcome any challenges that come with going global.
-From logistics and taxes to translation and localisation, we provide a hassle-free full-service solution.
-We help brands prepare for a digital-first approach to commerce.
-Our close-knit team is passionate about eCommerce and deeply service-oriented.
-Committed to helping you Launch, Grow & Optimize your business on Marketplaces.
-Most of our business comes through referrals — proof of our customer satisfaction.
-</p>
-
-</section>
-
-
-
-<!-- ================= WHAT WE DO ================= -->
-<section id="services" class="section dark">
-
-<h2>What We Do</h2>
-
-<p>
-We leverage our capabilities and technology to design, market, distribute and accelerate brands globally.
-We bring niche knowledge and global perspective with hands-on support to win in competitive markets.
-</p>
-
-<div class="services-split reveal">
-
-    <!-- LEFT SIDE TABS -->
-    <div class="services-tabs">
-        <div class="tab active" data-tab="t1">📦 Marketplace Management</div>
-        <div class="tab" data-tab="t2">📈 Performance Marketing</div>
-        <div class="tab" data-tab="t3">📊 Business Analysis</div>
-        <div class="tab" data-tab="t4">🚀 Growth Strategy</div>
-    </div>
-
-    <!-- RIGHT SIDE CONTENT -->
-    <div class="services-content">
-
-        <div class="content active" id="t1">
-            <h3>Marketplace Management</h3>
-            <p>Complete catalog setup, listings optimization and operations to maximize marketplace sales.</p>
-        </div>
-
-        <div class="content" id="t2">
-            <h3>Performance Marketing</h3>
-            <p>ROI focused ads on Meta & Google that increase conversions and reduce customer acquisition costs.</p>
-        </div>
-
-        <div class="content" id="t3">
-            <h3>Business Analysis</h3>
-            <p>Data insights, competitor tracking and reports to uncover opportunities and scale faster.</p>
-        </div>
-
-        <div class="content" id="t4">
-            <h3>Growth Strategy</h3>
-            <p>Structured scaling plans and optimization systems that help your brand grow consistently.</p>
-        </div>
-
-    </div>
-
-</div>
-
-
-</section>
-
-
-
-<!-- ================= REACH ================= -->
-<section id="reach" class="section light reveal">
-
-<h2>Let's Start a Partnership</h2>
-
-<p>
-Thank You.<br>
-Are you ready to accelerate your commerce growth?<br>
-Pull up a seat and share your brand vision with us.
-</p>
-
-<div class="contact-box">
-📞 +91 9711660117<br>
-📧 network.media@hotmail.com
-</div>
-
-<a href="mailto:network.media@hotmail.com" class="btn">Contact Now</a>
-
-</section>
-
-
-
-<footer>
-© 2026 Network Media Inc. | All Rights Reserved
-</footer>
-
-
-<script>
-/* Scroll reveal animation */
-const reveals=document.querySelectorAll('.reveal');
-
-window.addEventListener('scroll',()=>{
-reveals.forEach(el=>{
-if(el.getBoundingClientRect().top < window.innerHeight-80){
-el.classList.add('show');
-}
-});
-});
-
-
-/* ===== Services Tabs ===== */
-const tabs=document.querySelectorAll('.tab');
-const contents=document.querySelectorAll('.content');
-
-tabs.forEach(tab=>{
-tab.addEventListener('click',()=>{
-tabs.forEach(t=>t.classList.remove('active'));
-contents.forEach(c=>c.classList.remove('active'));
-
-tab.classList.add('active');
-document.getElementById(tab.dataset.tab).classList.add('active');
-});
-});
-</script>
-
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
+    flex:1;
+    background:#1e293b;
+    padding:40px;
+    b
