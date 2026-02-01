@@ -130,4 +130,202 @@ p{
     flex:1;
     background:#1e293b;
     padding:40px;
-    b
+    border-radius:12px;
+}
+
+.content{
+    display:none;
+}
+
+.content.active{
+    display:block;
+}
+
+/* ================= BUTTON ================= */
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 28px;
+    background:#00c3ff;
+    color:black;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#00a2e0;
+}
+
+/* ================= CONTACT ================= */
+.contact-box{
+    font-size:18px;
+    margin-top:20px;
+}
+
+/* ================= FOOTER ================= */
+footer{
+    background:#111;
+    color:#aaa;
+    text-align:center;
+    padding:20px;
+}
+
+/* ================= ANIMATION ================= */
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:.8s;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+
+    nav{
+        padding:15px 20px;
+    }
+
+    nav ul{
+        gap:15px;
+    }
+
+    .section{
+        padding:80px 20px;
+    }
+
+    .services-split{
+        flex-direction:column;
+    }
+
+    .services-tabs,
+    .services-content{
+        width:100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav>
+<div><strong>Network Media Inc.</strong></div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">What We Do</a></li>
+<li><a href="#reach">Reach</a></li>
+</ul>
+</nav>
+
+<!-- ================= HOME ================= -->
+<section id="home" class="hero"></section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section light reveal">
+<h2>About Us</h2>
+<p>
+Our team can help you overcome any challenges that come with going global.
+From logistics and taxes to translation and localisation, we provide a hassle-free full-service solution.
+We help brands prepare for a digital-first approach to commerce.
+Committed to helping you Launch, Grow & Optimize your business on Marketplaces.
+</p>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="section dark">
+
+<h2>What We Do</h2>
+
+<div class="services-split reveal">
+
+    <div class="services-tabs">
+        <div class="tab active" data-tab="t1">📦 Marketplace Management</div>
+        <div class="tab" data-tab="t2">📈 Performance Marketing</div>
+        <div class="tab" data-tab="t3">📊 Business Analysis</div>
+        <div class="tab" data-tab="t4">🚀 Growth Strategy</div>
+    </div>
+
+    <div class="services-content">
+
+        <div class="content active" id="t1">
+            <h3>Marketplace Management</h3>
+            <p>Complete catalog setup, listings optimization and operations to maximize marketplace sales.</p>
+        </div>
+
+        <div class="content" id="t2">
+            <h3>Performance Marketing</h3>
+            <p>ROI focused ads on Meta & Google that increase conversions.</p>
+        </div>
+
+        <div class="content" id="t3">
+            <h3>Business Analysis</h3>
+            <p>Data insights and reporting to scale your brand faster.</p>
+        </div>
+
+        <div class="content" id="t4">
+            <h3>Growth Strategy</h3>
+            <p>Structured scaling plans for consistent long-term growth.</p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="reach" class="section light reveal">
+
+<h2>Let's Start a Partnership</h2>
+
+<div class="contact-box">
+📞 +91 9711660117<br>
+📧 network.media@hotmail.com
+</div>
+
+<a href="mailto:network.media@hotmail.com" class="btn">Contact Now</a>
+
+</section>
+
+<footer>
+© 2026 Network Media Inc. | All Rights Reserved
+</footer>
+
+<script>
+
+/* Scroll animation */
+const reveals=document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll',()=>{
+reveals.forEach(el=>{
+if(el.getBoundingClientRect().top < window.innerHeight-80){
+el.classList.add('show');
+}
+});
+});
+
+/* Services tabs */
+const tabs=document.querySelectorAll('.tab');
+const contents=document.querySelectorAll('.content');
+
+tabs.forEach(tab=>{
+tab.addEventListener('click',()=>{
+tabs.forEach(t=>t.classList.remove('active'));
+contents.forEach(c=>c.classList.remove('active'));
+
+tab.classList.add('active');
+document.getElementById(tab.dataset.tab).classList.add('active');
+});
+});
+
+</script>
+
+</body>
+</html>
