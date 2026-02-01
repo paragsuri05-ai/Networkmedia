@@ -182,6 +182,66 @@ footer{
 
 <body>
 
+    /* ===== SERVICES SPLIT LAYOUT ===== */
+
+.services-split{
+display:flex;
+gap:50px;
+margin-top:50px;
+text-align:left;
+}
+
+.services-tabs{
+width:35%;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.tab{
+background:#1e293b;
+padding:18px 22px;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+.tab:hover{
+background:#26344f;
+}
+
+.tab.active{
+background:#00c3ff;
+color:black;
+font-weight:600;
+}
+
+.services-content{
+width:65%;
+background:#1e293b;
+padding:40px;
+border-radius:12px;
+}
+
+.content{
+display:none;
+}
+
+.content.active{
+display:block;
+}
+
+@media(max-width:768px){
+.services-split{
+flex-direction:column;
+}
+.services-tabs,
+.services-content{
+width:100%;
+}
+}
+
+
 <!-- ================= NAVBAR ================= -->
 <nav>
 <div><strong>Network Media Inc.</strong></div>
@@ -229,14 +289,43 @@ We leverage our capabilities and technology to design, market, distribute and ac
 We bring niche knowledge and global perspective with hands-on support to win in competitive markets.
 </p>
 
-<div class="grid reveal">
+<div class="services-split reveal">
 
-<div class="card">Marketplace Management</div>
-<div class="card">Digital & Performance Marketing</div>
-<div class="card">Strategy & Design</div>
-<div class="card">Business Analysis</div>
+    <!-- LEFT SIDE TABS -->
+    <div class="services-tabs">
+        <div class="tab active" data-tab="t1">📦 Marketplace Management</div>
+        <div class="tab" data-tab="t2">📈 Performance Marketing</div>
+        <div class="tab" data-tab="t3">📊 Business Analysis</div>
+        <div class="tab" data-tab="t4">🚀 Growth Strategy</div>
+    </div>
+
+    <!-- RIGHT SIDE CONTENT -->
+    <div class="services-content">
+
+        <div class="content active" id="t1">
+            <h3>Marketplace Management</h3>
+            <p>Complete catalog setup, listings optimization and operations to maximize marketplace sales.</p>
+        </div>
+
+        <div class="content" id="t2">
+            <h3>Performance Marketing</h3>
+            <p>ROI focused ads on Meta & Google that increase conversions and reduce customer acquisition costs.</p>
+        </div>
+
+        <div class="content" id="t3">
+            <h3>Business Analysis</h3>
+            <p>Data insights, competitor tracking and reports to uncover opportunities and scale faster.</p>
+        </div>
+
+        <div class="content" id="t4">
+            <h3>Growth Strategy</h3>
+            <p>Structured scaling plans and optimization systems that help your brand grow consistently.</p>
+        </div>
+
+    </div>
 
 </div>
+
 
 </section>
 
@@ -269,7 +358,6 @@ Pull up a seat and share your brand vision with us.
 </footer>
 
 
-
 <script>
 /* Scroll reveal animation */
 const reveals=document.querySelectorAll('.reveal');
@@ -281,10 +369,27 @@ el.classList.add('show');
 }
 });
 });
+
+
+/* ===== Services Tabs ===== */
+const tabs=document.querySelectorAll('.tab');
+const contents=document.querySelectorAll('.content');
+
+tabs.forEach(tab=>{
+tab.addEventListener('click',()=>{
+tabs.forEach(t=>t.classList.remove('active'));
+contents.forEach(c=>c.classList.remove('active'));
+
+tab.classList.add('active');
+document.getElementById(tab.dataset.tab).classList.add('active');
+});
+});
 </script>
+
 
 </body>
 </html>
+
 
 
 
