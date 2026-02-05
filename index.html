@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,26 +24,34 @@ background:#0b1220;
 color:white;
 line-height:1.7;
 overflow-x:hidden;
+   /* ⭐ NAVBAR space fix */
 }
 
-/* ================= NAVBAR ================= */
+/* ================= CLEAN GOBBLE NAVBAR ================= */
 nav{
 position:fixed;
 top:16px;
 left:50%;
 transform:translateX(-50%);
+
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:12px 40px;
-gap:90px;
+
+padding:12px 40px; /* more width */
+gap:90px; /* ⭐ more gap */
+
 background:rgba(15,23,42,0.55);
 backdrop-filter:blur(10px);
+
 border:1px solid rgba(255,255,255,0.12);
 border-radius:40px;
-width:820px;
+
+width:820px; /* ⭐ fixed wider like Gobble */
 max-width:92%;
+
 z-index:1000;
+
 box-shadow:0 8px 30px rgba(0,0,0,.45);
 }
 
@@ -55,11 +64,14 @@ text-decoration:none;
 color:white;
 }
 
+
 /* LINKS */
 nav ul{
 display:flex;
-gap:42px;
+gap:42px; /* ⭐ more spacing */
 margin-left:auto;
+}
+nav ul{
 list-style:none;
 }
 
@@ -69,28 +81,39 @@ color:#dff9ff; /* extra light blue */
 font-size:14px;
 font-weight:500;
 transition:.25s ease;
-opacity:.95;
+opacity:.9;
 }
 
 nav ul li a:hover{
 color:#ffffff;
+opacity:1;
 }
 
-/* ================= HERO ================= */
+
+
+/* ================= HERO SPLIT ================= */
 .hero{
 height:100vh;
 display:flex;
 align-items:center;
 justify-content:space-between;
+
+/* ⭐ navbar space added */
 padding:90px 10% 0;
+
 gap:70px;
+
 background:
 radial-gradient(circle at 10% 20%, #00d4ff33, transparent 40%),
 radial-gradient(circle at 80% 70%, #0066ff33, transparent 40%);
 }
 
-.hero-text{flex:1;}
+/* LEFT TEXT */
+.hero-text{
+flex:1;
+}
 
+/* ================= HERO HEADING PRO (Gobble style) ================= */
 .hero-text h1{
 font-size:62px;
 font-weight:700;
@@ -99,6 +122,7 @@ letter-spacing:-2px;
 margin-bottom:22px;
 }
 
+/* gradient highlight word */
 .highlight{
 background:linear-gradient(45deg,#00d4ff,#4f8cff);
 -webkit-background-clip:text;
@@ -106,13 +130,18 @@ background:linear-gradient(45deg,#00d4ff,#4f8cff);
 font-weight:800;
 }
 
+/* subtitle */
 .hero-text p{
 font-size:18px;
 opacity:.75;
 max-width:600px;
+margin-top:10px;
 }
 
-.hero-img{flex:1.2;}
+/* RIGHT IMAGE */
+.hero-img{
+flex:1.2;
+}
 
 .hero-img img{
 width:100%;
@@ -120,7 +149,8 @@ border-radius:18px;
 box-shadow:0 20px 60px rgba(0,0,0,.6);
 }
 
-/* BUTTON */
+
+/* ================= BUTTON ================= */
 .btn{
 display:inline-block;
 margin-top:30px;
@@ -153,46 +183,81 @@ margin:auto;
 opacity:.85;
 }
 
-/* ================= SERVICES ================= */
+
+/* =====================================================
+   SERVICES SPLIT LAYOUT (GobbleCube Style)
+===================================================== */
+
 .services-split{
 display:flex;
 gap:40px;
 margin-top:60px;
 padding:40px;
+
 border-radius:22px;
 border:1px solid rgba(255,255,255,0.08);
+
 background:rgba(255,255,255,0.03);
+backdrop-filter:blur(6px);
 }
 
+
+/* LEFT TABS */
 .services-tabs{
-width:320px;
-display:flex;
-flex-direction:column;
-gap:18px;
+  width:320px;
+  flex-shrink:0;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
 }
 
+/* TAB CARD */
 .tab{
-padding:18px 22px;
-border-radius:14px;
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.15);
-cursor:pointer;
-transition:.35s;
+  padding:18px 22px;
+  border-radius:14px;
+  background:rgba(255,255,255,0.05); /* subtle dark */
+  border:1px solid rgba(255,255,255,0.15);
+  cursor:pointer;
+  transition:.35s;
+  color:#e2e8f0;
+  font-weight:500;
+  font-size:15px;
 }
 
+/* Hover Effect */
+.tab:hover{
+  transform:translateX(6px);
+  border-color:#00c3ff;
+  box-shadow:0 0 12px rgba(0,195,255,0.2);
+}
+
+/* Active Tab - subtle highlight */
 .tab.active{
-background:rgba(255,255,255,0.12);
-border-color:#00c3ff;
+  background:rgba(255,255,255,0.12); /* slightly lighter */
+  border-color:#00c3ff; /* subtle glow */
+  color:white;
+  font-weight:600;
+  box-shadow:0 0 15px rgba(0,195,255,0.25);
 }
 
+/* RIGHT CONTENT CARD */
 .services-content{
-flex:1;
-padding:45px;
-text-align:left;
+  flex:1;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:18px;
+  padding:45px;
+  text-align:left;
+  transition:all 0.3s ease;
 }
 
-.content{display:none;}
-.content.active{display:block;}
+.content{
+  display:none;
+}
+
+.content.active{
+  display:block;
+}
 
 /* ================= STATS ================= */
 .stats{
@@ -207,40 +272,13 @@ font-size:46px;
 color:#00d4ff;
 }
 
-/* ================= TRUSTED ================= */
-.trusted{
-padding:120px 10%;
-text-align:center;
-}
-
-.trusted-box{
-padding:50px 40px;
-border-radius:28px;
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.12);
-}
-
-.logos{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:60px;
-margin-bottom:40px;
-}
-
-.logos img{
-height:38px;
-filter:brightness(0) invert(1);
-opacity:.75;
-}
-
 /* ================= IMAGE BLOCK ================= */
 .image-block{
-display:flex;
-align-items:center;
-gap:20px;
-text-align:left;
-padding:60px 10%;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  text-align:left;
+  padding:60px 10%;
 }
 
 .image-block img{
@@ -248,12 +286,14 @@ width:50%;
 border-radius:20px;
 }
 
-.image-block div{flex:1;}
+.image-block div{
+flex:1;
+}
 
 /* ================= CTA ================= */
 .cta{
 background:linear-gradient(45deg,#00d4ff,#0066ff);
-padding:40px 20px;
+padding:15px 20px;
 text-align:center;
 }
 
@@ -267,14 +307,90 @@ opacity:.6;
 
 /* ================= RESPONSIVE ================= */
 @media(max-width:900px){
-.hero,
-.image-block,
-.stats{
+.hero{
 flex-direction:column;
 text-align:center;
 }
-.image-block img{width:100%;}
+
+.image-block{
+flex-direction:column;
+text-align:center;
 }
+
+.image-block img{
+width:100%;
+}
+
+.stats{
+flex-direction:column;
+gap:30px;
+}
+}
+   /* ================= TRUSTED BRANDS ================= */
+
+.trusted{
+padding:120px 10%;
+text-align:center;
+}
+
+.trusted h2{
+font-size:32px;
+font-weight:600;
+margin-bottom:40px;
+}
+
+.trusted-box{
+padding:50px 40px;
+border-radius:28px;
+
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.12);
+
+backdrop-filter:blur(8px);
+box-shadow:0 20px 80px rgba(0,0,0,.45);
+}
+
+/* LOGOS ROW */
+.logos{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+gap:60px;
+margin-bottom:40px;
+}
+
+/* LOGO STYLE */
+.logos img{
+height:38px;
+filter:brightness(0) invert(1);
+opacity:.75;
+transition:.3s;
+}
+
+.logos img:hover{
+opacity:1;
+transform:scale(1.08);
+}
+
+/* BUTTON */
+.trusted-btn{
+display:inline-block;
+padding:14px 28px;
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,.25);
+text-decoration:none;
+color:#e2e8f0;
+
+transition:.3s;
+}
+
+.trusted-btn:hover{
+background:rgba(255,255,255,.08);
+}
+
+
 
 </style>
 </head>
@@ -283,62 +399,214 @@ text-align:center;
 
 <!-- NAVBAR -->
 <nav>
+
 <a href="#home" class="nav-logo">Network Media Inc.</a>
+
 <ul>
 <li><a href="#about">Know Us</a></li>
 <li><a href="#services">What We Do</a></li>
 <li><a href="#trusted">Partners</a></li>
 <li><a href="#reach">Reach Us</a></li>
 </ul>
+
 </nav>
+
+
+
+
 
 <!-- HERO -->
 <section id="home" class="hero">
+
 <div class="hero-text">
-<h1>Expand Globally.<br><span class="highlight">Grow</span> Faster.</h1>
-<p>Network Media helps brands scale across marketplaces worldwide.</p>
+<h1>
+Expand Globally.<br>
+<span class="highlight">Grow</span> Faster.
+</h1>
+
+
+<p>
+Network Media helps brands scale across Amazon, Walmart, Flipkart, Myntra,
+Nykaa, Blinkit, Zepto,Instamart & more.
+</p>
+
 <a href="#services" class="btn">Explore Services</a>
 </div>
+
 <div class="hero-img">
 <img src="images/hero.jpg">
 </div>
+
 </section>
+
+
 
 <!-- ABOUT -->
 <section id="about" class="section">
 <h2>Know Us</h2>
-<p>We help brands launch, grow and optimize across global marketplaces.</p>
+
+<p>
+Our team can help you overcome any challenges that come with going global. 
+  From logistics and taxes to translation and localisation, we provide a hassle-free full-service solution. 
+  We help brands prepare for a digital-first approach to commerce. Our close-knit team is passionate about eCommerce and deeply service-oriented. 
+  Committed to helping you Launch, Grow & Optimize your business on Marketplaces. 
+  Most of our business comes through referrals — proof of our customer satisfaction.
+</p>
+
+<div class="stats">
+<div class="stat"><h3>50+</h3><p>Brands</p></div>
+<div class="stat"><h3>15+</h3><p>Marketplaces</p></div>
+<div class="stat"><h3>5x</h3><p>Growth</p></div>
+</div>
 </section>
 
-<!-- TRUSTED -->
+   <!-- ================= TRUSTED BRANDS ================= -->
 <section id="trusted" class="trusted">
-<h2>Trusted By <span class="highlight">350+</span> Leading Brands Worldwide</h2>
+
+<h2>
+Trusted By <span class="highlight">350+</span> Leading Brands Worldwide
+</h2>
+
 <div class="trusted-box">
+
 <div class="logos">
 <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/L%27Or%C3%A9al_logo.svg">
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Nivea_logo.svg">
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Dabur_Logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Reckitt_logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Philips_logo_new.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Dr_Reddy%27s_Laboratories_logo.svg">
 </div>
+
+<a href="#" class="trusted-btn">See what we unlocked for them →</a>
+
 </div>
 </section>
 
-<!-- SERVICES -->
+
+<!-- ================= SERVICES ================= -->
 <section id="services" class="section dark">
+
 <h2>What We Do</h2>
+
+<div class="services-split">
+
+<div class="services-tabs">
+
+<div class="tab active" data-tab="t1"> Marketplace Management</div>
+<div class="tab" data-tab="t2"> Performance Marketing</div>
+<div class="tab" data-tab="t3"> Business Analysis</div>
+<div class="tab" data-tab="t4"> Growth Strategy</div>
+
+</div>
+
+
+<div class="services-content">
+
+<div class="content active" id="t1">
+<h3>Marketplace Management</h3>
+<p>Catalog setup, listing optimization and daily operations to maximize sales.</p>
+</div>
+
+<div class="content" id="t2">
+<h3>Performance Marketing</h3>
+<p>ROI focused ads on Meta & Google to drive scalable conversions.</p>
+</div>
+
+<div class="content" id="t3">
+<h3>Business Analysis</h3>
+<p>Data insights, reports and competitor tracking to unlock growth opportunities.</p>
+</div>
+
+<div class="content" id="t4">
+<h3>Growth Strategy</h3>
+<p>Structured plans and systems that help your brand grow faster and smarter.</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- REACH -->
+<!-- IMAGE SECTION -->
 <section id="reach" class="section image-block">
 <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200">
+
 <div>
 <h2>Reach Us</h2>
-<p>Contact us to accelerate your growth.</p>
+<p>We take the lead in e-Commerce growth for your brand.</p>
+<p>
+Data-driven decisions, smart advertising, and seamless operations
+help your brand win in competitive marketplaces.
+</p>
 </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<h2>Let's Start a Partnership</h2>
+  </p>Are you ready to accelerate your e-Commerce growth?<p>
+<a href="mailto:network.media@hotmail.com" class="btn">Contact Now</a>
 </section>
 
 <footer>
 © 2026 Network Media Inc. All rights reserved.
 </footer>
 
+   
+   <!-- ================= SCRIPT ================= -->
+<script>
+
+const tabs=document.querySelectorAll('.tab');
+const contents=document.querySelectorAll('.content');
+
+tabs.forEach(tab=>{
+tab.addEventListener('click',()=>{
+tabs.forEach(t=>t.classList.remove('active'));
+contents.forEach(c=>c.classList.remove('active'));
+
+tab.classList.add('active');
+document.getElementById(tab.dataset.tab).classList.add('active');
+});
+});
+
+</script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
