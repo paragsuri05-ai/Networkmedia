@@ -124,4 +124,182 @@ background:#0f172a;
 /* ================= SERVICES ================= */
 .services-split{
 display:flex;
-gap
+gap:40px;
+margin-top:60px;
+padding:40px;
+border-radius:22px;
+background:rgba(255,255,255,0.03);
+}
+
+.services-tabs{
+width:320px;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.tab{
+padding:18px 22px;
+border-radius:14px;
+background:rgba(255,255,255,0.05);
+cursor:pointer;
+}
+
+.tab.active{
+background:rgba(255,255,255,0.12);
+}
+
+.services-content{
+flex:1;
+padding:45px;
+background:rgba(255,255,255,0.05);
+border-radius:18px;
+}
+
+.content{ display:none; }
+.content.active{ display:block; }
+
+/* ================= MOBILE ONLY ================= */
+@media(max-width:900px){
+
+nav{
+width:95%;
+flex-direction:column;
+gap:18px;
+}
+
+.nav-links{
+display:none !important;
+flex-direction:column;
+gap:14px;
+margin-left:0;
+align-items:center;
+}
+
+.nav-active{
+display:flex !important;
+}
+
+.mobile-toggle{
+display:flex;
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+height:auto;
+}
+
+.services-split{
+flex-direction:column;
+padding:20px;
+}
+
+.services-content{
+display:none !important;
+}
+
+.tab{
+width:100%;
+}
+
+.mobile-content{
+display:none;
+margin-top:10px;
+padding:12px;
+background:rgba(255,255,255,0.06);
+border-radius:10px;
+}
+
+.mobile-content.show{
+display:block;
+}
+
+}
+
+/* ================= HAMBURGER ================= */
+.mobile-toggle{
+display:none;
+flex-direction:column;
+gap:5px;
+cursor:pointer;
+}
+.mobile-toggle span{
+width:26px;
+height:3px;
+background:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#home" class="nav-logo">Network Media Inc.</a>
+
+<div class="mobile-toggle" id="mobile-toggle">
+<span></span><span></span><span></span>
+</div>
+
+<ul class="nav-links" id="nav-links">
+<li><a href="#about">Know Us</a></li>
+<li><a href="#services">What We Do</a></li>
+<li><a href="#reach">Reach Us</a></li>
+</ul>
+</nav>
+
+<section class="hero" id="home">
+<div class="hero-text">
+<h1>Expand Globally.<br><span class="highlight">Grow</span> Faster.</h1>
+<a href="#services" class="btn">Explore Services</a>
+</div>
+</section>
+
+<section id="services" class="section dark">
+<h2>What We Do</h2>
+
+<div class="services-split">
+
+<div class="services-tabs">
+<div class="tab active" data-tab="t1">Marketplace
+<div class="mobile-content">Catalog setup & optimization</div></div>
+
+<div class="tab" data-tab="t2">Marketing
+<div class="mobile-content">Ads & performance growth</div></div>
+</div>
+
+<div class="services-content">
+<div class="content active" id="t1">Desktop content 1</div>
+<div class="content" id="t2">Desktop content 2</div>
+</div>
+
+</div>
+</section>
+
+<script>
+const tabs=document.querySelectorAll('.tab');
+const contents=document.querySelectorAll('.content');
+
+tabs.forEach(tab=>{
+tab.onclick=()=>{
+tabs.forEach(t=>t.classList.remove('active'));
+contents.forEach(c=>c.classList.remove('active'));
+tab.classList.add('active');
+document.getElementById(tab.dataset.tab)?.classList.add('active');
+
+if(window.innerWidth<=900){
+const box=tab.querySelector('.mobile-content');
+document.querySelectorAll('.mobile-content').forEach(c=>c.classList.remove('show'));
+box.classList.toggle('show');
+}
+}
+});
+
+document.getElementById("mobile-toggle").onclick=()=>{
+document.getElementById("nav-links").classList.toggle("nav-active");
+};
+</script>
+
+</body>
+</html>
