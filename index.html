@@ -25,30 +25,23 @@ line-height:1.7;
 overflow-x:hidden;
 }
 
-
 /* ================= NAVBAR ================= */
 nav{
 position:fixed;
 top:16px;
 left:50%;
 transform:translateX(-50%);
-
 display:flex;
 align-items:center;
 justify-content:space-between;
-
 padding:12px 40px;
 gap:90px;
-
 background:rgba(15,23,42,0.55);
 backdrop-filter:blur(10px);
-
 border:1px solid rgba(255,255,255,0.12);
 border-radius:40px;
-
-width:90%;
-max-width:820px;
-
+width:820px;
+max-width:92%;
 z-index:1000;
 box-shadow:0 8px 30px rgba(0,0,0,.45);
 }
@@ -60,46 +53,28 @@ text-decoration:none;
 color:white;
 }
 
-
-/* NAV LINKS */
 .nav-links{
 display:flex;
 gap:42px;
+margin-left:auto;
 list-style:none;
 }
 
-.nav-links a{
+nav ul li a{
 text-decoration:none;
 color:#dff9ff;
 font-size:14px;
-font-weight:500;
 opacity:.9;
 }
 
-.nav-links a:hover{
+nav ul li a:hover{
 color:#fff;
+opacity:1;
 }
-
-
-/* ===== HAMBURGER (hidden desktop) ===== */
-.mobile-toggle{
-display:none;
-flex-direction:column;
-gap:5px;
-cursor:pointer;
-}
-
-.mobile-toggle span{
-width:26px;
-height:3px;
-background:white;
-border-radius:3px;
-}
-
 
 /* ================= HERO ================= */
 .hero{
-min-height:100vh;
+height:100vh;
 display:flex;
 align-items:center;
 justify-content:space-between;
@@ -111,8 +86,6 @@ gap:70px;
 font-size:62px;
 font-weight:700;
 line-height:1.05;
-letter-spacing:-2px;
-margin-bottom:22px;
 }
 
 .highlight{
@@ -121,20 +94,12 @@ background:linear-gradient(45deg,#00d4ff,#4f8cff);
 -webkit-text-fill-color:transparent;
 }
 
-.hero-text p{
-font-size:18px;
-opacity:.75;
-max-width:600px;
-}
-
 .hero-img img{
 width:100%;
 border-radius:18px;
-box-shadow:0 20px 60px rgba(0,0,0,.6);
 }
 
-
-/* BUTTON */
+/* ================= BUTTON ================= */
 .btn{
 display:inline-block;
 margin-top:30px;
@@ -146,8 +111,7 @@ text-decoration:none;
 font-weight:600;
 }
 
-
-/* ================= SECTION ================= */
+/* ================= SECTIONS ================= */
 .section{
 padding:120px 10%;
 text-align:center;
@@ -157,201 +121,7 @@ text-align:center;
 background:#0f172a;
 }
 
-h2{
-font-size:38px;
-margin-bottom:25px;
-}
-
-img{
-max-width:100%;
-height:auto;
-}
-
-
 /* ================= SERVICES ================= */
 .services-split{
 display:flex;
-gap:40px;
-margin-top:60px;
-padding:40px;
-border-radius:22px;
-border:1px solid rgba(255,255,255,0.08);
-background:rgba(255,255,255,0.03);
-}
-
-.services-tabs{
-width:320px;
-display:flex;
-flex-direction:column;
-gap:18px;
-}
-
-.tab{
-padding:18px 22px;
-border-radius:14px;
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.15);
-cursor:pointer;
-}
-
-.tab.active{
-border-color:#00c3ff;
-}
-
-.services-content{
-flex:1;
-padding:45px;
-background:rgba(255,255,255,0.05);
-border-radius:18px;
-}
-
-.content{display:none;}
-.content.active{display:block;}
-
-
-/* ================= IMAGE BLOCK ================= */
-.image-block{
-display:flex;
-align-items:center;
-gap:20px;
-padding:60px 10%;
-}
-
-
-/* ================= FOOTER ================= */
-footer{
-background:#050a14;
-padding:30px;
-text-align:center;
-opacity:.6;
-}
-
-
-
-/* =====================================================
-   🔥🔥🔥 MOBILE RESPONSIVE (Gobblecube Style)
-===================================================== */
-
-@media(max-width:900px){
-
-/* NAVBAR */
-.mobile-toggle{
-display:flex;
-}
-
-.nav-links{
-display:none;
-}
-
-.nav-active{
-display:flex !important;
-flex-direction:column;
-gap:18px;
-margin-top:20px;
-}
-
-/* HERO */
-.hero{
-flex-direction:column;
-text-align:center;
-padding:120px 20px 60px;
-gap:40px;
-}
-
-.hero-text h1{
-font-size:34px;
-}
-
-.hero-text p{
-font-size:14px;
-}
-
-/* SERVICES STACK */
-.services-split{
-flex-direction:column;
-padding:20px;
-}
-
-.services-tabs{
-width:100%;
-flex-direction:row;
-flex-wrap:wrap;
-}
-
-.tab{
-flex:1 1 48%;
-text-align:center;
-}
-
-/* IMAGE BLOCK */
-.image-block{
-flex-direction:column;
-text-align:center;
-}
-
-/* SECTION */
-.section{
-padding:80px 20px;
-}
-
-}
-
-</style>
-</head>
-
-
-<body>
-
-<!-- NAVBAR -->
-<nav>
-
-<a href="#home" class="nav-logo">Network Media Inc.</a>
-
-<div class="mobile-toggle" id="mobile-toggle">
-<span></span>
-<span></span>
-<span></span>
-</div>
-
-<ul class="nav-links" id="nav-links">
-<li><a href="#about">Know Us</a></li>
-<li><a href="#services">What We Do</a></li>
-<li><a href="#trusted">Partners</a></li>
-<li><a href="#reach">Reach Us</a></li>
-</ul>
-
-</nav>
-
-
-
-<!-- HERO -->
-<section class="hero">
-<div class="hero-text">
-<h1>Expand Globally.<br><span class="highlight">Grow</span> Faster.</h1>
-<p>Network Media helps brands scale across marketplaces worldwide.</p>
-<a href="#services" class="btn">Explore Services</a>
-</div>
-
-<div class="hero-img">
-<img src="images/hero.jpg">
-</div>
-</section>
-
-
-
-<footer>
-© 2026 Network Media Inc. All rights reserved.
-</footer>
-
-
-
-<!-- ===== MOBILE MENU SCRIPT ===== -->
-<script>
-const toggle=document.getElementById('mobile-toggle');
-const links=document.getElementById('nav-links');
-
-toggle.onclick=()=>links.classList.toggle('nav-active');
-</script>
-
-</body>
-</html>
+gap
