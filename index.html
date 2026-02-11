@@ -182,100 +182,6 @@ margin:auto;
 opacity:.85;
 }
 
-/* =========================================
-   ULTRA PREMIUM SERVICES (GobbleCube Clone)
-========================================= */
-
-.services-split{
-display:flex;
-gap:60px;
-margin-top:80px;
-padding:60px;
-border-radius:30px;
-background:linear-gradient(135deg,rgba(0,212,255,.08),rgba(0,102,255,.08));
-border:1px solid rgba(255,255,255,.15);
-backdrop-filter:blur(18px);
-box-shadow:0 30px 100px rgba(0,0,0,.6);
-}
-
-.services-tabs{
-width:360px;
-display:flex;
-flex-direction:column;
-gap:22px;
-}
-
-.tab{
-display:flex;
-align-items:center;
-gap:14px;
-padding:22px 26px;
-border-radius:18px;
-cursor:pointer;
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,255,255,.12);
-transition:.35s;
-font-weight:600;
-font-size:16px;
-color:#dbeafe;
-}
-
-.tab i{
-width:36px;
-height:36px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:12px;
-background:rgba(255,255,255,.08);
-}
-
-.tab:hover{
-transform:translateX(10px);
-border-color:#00d4ff;
-box-shadow:0 0 22px rgba(0,212,255,.35);
-}
-
-.tab.active{
-background:linear-gradient(135deg,#00d4ff,#007bff);
-color:white;
-border:none;
-}
-
-.services-content{
-flex:1;
-display:flex;
-align-items:center;
-gap:45px;
-padding:55px;
-border-radius:24px;
-background:rgba(255,255,255,.07);
-border:1px solid rgba(255,255,255,.15);
-}
-
-.service-img{
-width:46%;
-border-radius:18px;
-}
-
-.service-text{
-flex:1;
-}
-
-.content-box{
-display:none;
-}
-
-.content-box.active{
-display:flex;
-}
-
-@media(max-width:900px){
-.services-split{flex-direction:column;padding:22px;}
-.services-content{display:none;}
-.tab{width:100%;}
-}
-
 
 /* ================= STATS ================= */
 .stats{
@@ -314,6 +220,75 @@ background:linear-gradient(45deg,#00d4ff,#0066ff);
 padding:15px 20px;
 text-align:center;
 }
+
+   /* ================= GOBBLECUBE SERVICES ================= */
+
+.services-container{
+  display:flex;
+  gap:60px;
+  margin-top:60px;
+  padding:30px;
+  background:rgba(255,255,255,0.04);
+  border-radius:28px;
+  border:1px solid rgba(255,255,255,0.12);
+  backdrop-filter:blur(14px);
+}
+
+.gc-tabs{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  width:350px;
+}
+
+.gc-tab{
+  padding:18px 24px;
+  border-radius:16px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.15);
+  font-size:16px;
+  font-weight:500;
+  cursor:pointer;
+  transition:.25s ease;
+  color:#d4e0f0;
+}
+
+.gc-tab:hover{
+  transform:translateX(6px);
+}
+
+.gc-tab.active{
+  background:linear-gradient(135deg,#00d4ff,#007bff);
+  color:white;
+  border:none;
+}
+
+.gc-content{
+  flex:1;
+  padding:30px;
+}
+
+.gc-box{
+  display:none;
+  animation:fadein .35s ease;
+}
+
+.gc-box.active{
+  display:block;
+}
+
+@keyframes fadein{
+  from{opacity:0;transform:translateY(8px);}
+  to{opacity:1;}
+}
+
+@media(max-width:900px){
+  .services-container{
+    flex-direction:column;
+  }
+  .gc-tabs{width:100%;}
+}
+
    /* ===== ABOUT BOX STYLING ===== */
 .about-box {
   background: rgba(255,255,255,0.05);
@@ -804,45 +779,105 @@ Nykaa, Blinkit, Zepto,Instamart & more.
 
 
 <section id="services" class="section dark">
+  <h2>What We Do</h2>
 
-<h2>What We Do</h2>
+  <div class="services-container">
 
-<div class="services-split">
+    <!-- LEFT QUESTIONS (tabs) -->
+    <div class="gc-tabs">
 
-  <div class="services-tabs">
+      <div class="gc-tab active" data-tab="gc1">
+        What’s hurting my sales?
+      </div>
 
-    <div class="tab active" data-tab="t1"><i>🛒</i> Marketplace Management</div>
-    <div class="tab" data-tab="t2"><i>📈</i> Performance Marketing</div>
-    <div class="tab" data-tab="t3"><i>📊</i> Business Analysis</div>
-    <div class="tab" data-tab="t4"><i>🚀</i> Growth Strategy</div>
+      <div class="gc-tab" data-tab="gc2">
+        How can I improve my marketing ROI?
+      </div>
+
+      <div class="gc-tab" data-tab="gc3">
+        How do I ensure demand fulfillment?
+      </div>
+
+      <div class="gc-tab" data-tab="gc4">
+        How do I build the right product faster?
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT CONTENT PANEL -->
+    <div class="gc-content">
+
+      <div class="gc-box active" id="gc1">
+
+        <div class="gc-icons">
+          <span class="icon">📊</span>
+          <span class="icon">🛒</span>
+          <span class="icon">🔍</span>
+        </div>
+
+        <h3>Get clear actions with root-cause diagnostics</h3>
+
+        <p>We analyze pricing, visibility, and fulfillment barriers across platforms so you know exactly what’s hurting your sales.</p>
+
+        <a href="#contact" class="gc-btn">Explore Solutions →</a>
+
+      </div>
+
+
+      <div class="gc-box" id="gc2">
+
+        <div class="gc-icons">
+          <span class="icon">📈</span>
+          <span class="icon">💡</span>
+          <span class="icon">💰</span>
+        </div>
+
+        <h3>Improve your marketing ROI with precision</h3>
+
+        <p>We help you refine advertising, reduce wastage, and improve conversions with data-driven ad strategies.</p>
+
+        <a href="#contact" class="gc-btn">Explore Marketing →</a>
+
+      </div>
+
+
+      <div class="gc-box" id="gc3">
+
+        <div class="gc-icons">
+          <span class="icon">🧠</span>
+          <span class="icon">📦</span>
+          <span class="icon">🔄</span>
+        </div>
+
+        <h3>Ensure demand fulfillment across channels</h3>
+
+        <p>From inventory to supply chain visibility, we ensure each channel stays stocked and competitive.</p>
+
+        <a href="#contact" class="gc-btn">Explore Demand Ops →</a>
+
+      </div>
+
+
+      <div class="gc-box" id="gc4">
+
+        <div class="gc-icons">
+          <span class="icon">🚀</span>
+          <span class="icon">📌</span>
+          <span class="icon">💼</span>
+        </div>
+
+        <h3>Build the right product strategies faster</h3>
+
+        <p>Product planning, pricing, and competitive intelligence to outperform competitors and win on marketplaces.</p>
+
+        <a href="#contact" class="gc-btn">Explore Strategy →</a>
+
+      </div>
+
+    </div>
 
   </div>
-
-  <div class="services-content">
-
-    <div class="content-box active" id="t1">
-      <h3>Marketplace Management</h3>
-      <p>Catalog setup, listing optimization and daily operations to maximize sales.</p>
-    </div>
-
-    <div class="content-box" id="t2">
-      <h3>Performance Marketing</h3>
-      <p>ROI focused ads on Meta & Google to drive scalable conversions.</p>
-    </div>
-
-    <div class="content-box" id="t3">
-      <h3>Business Analysis</h3>
-      <p>Reports and insights to unlock predictable growth.</p>
-    </div>
-
-    <div class="content-box" id="t4">
-      <h3>Growth Strategy</h3>
-      <p>Long term scaling plans and marketplace expansion.</p>
-    </div>
-
-  </div>
-
-</div>
 </section>
 
 
@@ -877,43 +912,20 @@ help your brand win in competitive marketplaces.
    
 <!-- ================= SCRIPT ================= -->
 <script>
+/* ===== GOBBLECUBE TABS ===== */
 
-/* ===== SERVICES (desktop + mobile both) ===== */
 
-const tabs = document.querySelectorAll('.tab');
-const boxes = document.querySelectorAll('.content-box');
+const gcTabs = document.querySelectorAll('.gc-tab');
+const gcBoxes = document.querySelectorAll('.gc-box');
 
-tabs.forEach(tab=>{
-
-  tab.addEventListener('click', ()=>{
-
-    const id = tab.dataset.tab;
-
-    /* remove active */
-    tabs.forEach(t=>t.classList.remove('active'));
-    boxes.forEach(b=>b.classList.remove('active'));
+gcTabs.forEach((tab,i)=>{
+  tab.addEventListener('click',()=>{
+    gcTabs.forEach(t=>t.classList.remove('active'));
+    gcBoxes.forEach(b=>b.classList.remove('active'));
 
     tab.classList.add('active');
-
-    /* DESKTOP right content */
-    const box = document.getElementById(id);
-    if(box) box.classList.add('active');
-
-    /* MOBILE accordion */
-    if(window.innerWidth <= 900){
-
-      const mobileBox = tab.querySelector('.mobile-content');
-
-      document.querySelectorAll('.mobile-content')
-        .forEach(c=>{
-          if(c !== mobileBox) c.classList.remove('show');
-        });
-
-      mobileBox.classList.toggle('show');
-    }
-
+    gcBoxes[i].classList.add('active');
   });
-
 });
 
 
@@ -926,32 +938,17 @@ toggle.onclick = ()=>{
   menu.classList.toggle("nav-active");
 };
 
-/* auto close after click */
 document.querySelectorAll("#nav-links a").forEach(link=>{
   link.onclick = ()=>{
     menu.classList.remove("nav-active");
   };
 });
 
-   /* AUTO SWITCH */
-let index = 0;
-
-setInterval(()=>{
-  if(window.innerWidth <= 900) return;
-
-  tabs[index].classList.remove('active');
-  boxes[index].classList.remove('active');
-
-  index = (index + 1) % tabs.length;
-
-  tabs[index].classList.add('active');
-  boxes[index].classList.add('active');
-},3000);
-
 </script>
 
 </body>
 </html>
+
 
 
 
