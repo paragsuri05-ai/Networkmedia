@@ -182,81 +182,100 @@ margin:auto;
 opacity:.85;
 }
 
-
-/* =====================================================
-   SERVICES SPLIT LAYOUT (GobbleCube Style)
-===================================================== */
+/* =========================================
+   ULTRA PREMIUM SERVICES (GobbleCube Clone)
+========================================= */
 
 .services-split{
 display:flex;
-gap:40px;
-margin-top:60px;
-padding:40px;
-
-border-radius:22px;
-border:1px solid rgba(255,255,255,0.08);
-
-background:rgba(255,255,255,0.03);
-backdrop-filter:blur(6px);
+gap:60px;
+margin-top:80px;
+padding:60px;
+border-radius:30px;
+background:linear-gradient(135deg,rgba(0,212,255,.08),rgba(0,102,255,.08));
+border:1px solid rgba(255,255,255,.15);
+backdrop-filter:blur(18px);
+box-shadow:0 30px 100px rgba(0,0,0,.6);
 }
 
-
-/* LEFT TABS */
 .services-tabs{
-  width:320px;
-  flex-shrink:0;
-  display:flex;
-  flex-direction:column;
-  gap:18px;
+width:360px;
+display:flex;
+flex-direction:column;
+gap:22px;
 }
 
-/* TAB CARD */
 .tab{
-  padding:18px 22px;
-  border-radius:14px;
-  background:rgba(255,255,255,0.05); /* subtle dark */
-  border:1px solid rgba(255,255,255,0.15);
-  cursor:pointer;
-  transition:.35s;
-  color:#e2e8f0;
-  font-weight:500;
-  font-size:15px;
+display:flex;
+align-items:center;
+gap:14px;
+padding:22px 26px;
+border-radius:18px;
+cursor:pointer;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.12);
+transition:.35s;
+font-weight:600;
+font-size:16px;
+color:#dbeafe;
 }
 
-/* Hover Effect */
+.tab i{
+width:36px;
+height:36px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:12px;
+background:rgba(255,255,255,.08);
+}
+
 .tab:hover{
-  transform:translateX(6px);
-  border-color:#00c3ff;
-  box-shadow:0 0 12px rgba(0,195,255,0.2);
+transform:translateX(10px);
+border-color:#00d4ff;
+box-shadow:0 0 22px rgba(0,212,255,.35);
 }
 
-/* Active Tab - subtle highlight */
 .tab.active{
-  background:rgba(255,255,255,0.12); /* slightly lighter */
-  border-color:#00c3ff; /* subtle glow */
-  color:white;
-  font-weight:600;
-  box-shadow:0 0 15px rgba(0,195,255,0.25);
+background:linear-gradient(135deg,#00d4ff,#007bff);
+color:white;
+border:none;
 }
 
-/* RIGHT CONTENT CARD */
 .services-content{
-  flex:1;
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.15);
-  border-radius:18px;
-  padding:45px;
-  text-align:left;
-  transition:all 0.3s ease;
+flex:1;
+display:flex;
+align-items:center;
+gap:45px;
+padding:55px;
+border-radius:24px;
+background:rgba(255,255,255,.07);
+border:1px solid rgba(255,255,255,.15);
 }
 
-.content{
-  display:none;
+.service-img{
+width:46%;
+border-radius:18px;
 }
 
-.content.active{
-  display:block;
+.service-text{
+flex:1;
 }
+
+.content-box{
+display:none;
+}
+
+.content-box.active{
+display:flex;
+}
+
+@media(max-width:900px){
+.services-split{flex-direction:column;padding:22px;}
+.services-content{display:none;}
+.tab{width:100%;}
+}
+
 
 /* ================= STATS ================= */
 .stats{
@@ -784,7 +803,6 @@ Nykaa, Blinkit, Zepto,Instamart & more.
 </section>
 
 
-<!-- ================= SERVICES PREMIUM ================= -->
 <section id="services" class="section dark">
 
 <h2>What We Do</h2>
@@ -793,26 +811,10 @@ Nykaa, Blinkit, Zepto,Instamart & more.
 
   <div class="services-tabs">
 
-    <div class="tab active" data-tab="t1">
-      Marketplace Management
-      <div class="mobile-content">
-        Catalog setup, listing optimization and daily operations to maximize sales across marketplaces.
-      </div>
-    </div>
-
-    <div class="tab" data-tab="t2">
-      Performance Marketing
-      <div class="mobile-content">
-        ROI focused Meta & Google ads with scalable growth campaigns.
-      </div>
-    </div>
-
-    <div class="tab" data-tab="t3">
-      Business Analysis
-      <div class="mobile-content">
-        Reports, insights, competitor tracking and analytics to unlock predictable growth.
-      </div>
-    </div>
+    <div class="tab active" data-tab="t1"><i>🛒</i> Marketplace Management</div>
+    <div class="tab" data-tab="t2"><i>📈</i> Performance Marketing</div>
+    <div class="tab" data-tab="t3"><i>📊</i> Business Analysis</div>
+    <div class="tab" data-tab="t4"><i>🚀</i> Growth Strategy</div>
 
   </div>
 
@@ -820,24 +822,29 @@ Nykaa, Blinkit, Zepto,Instamart & more.
 
     <div class="content-box active" id="t1">
       <h3>Marketplace Management</h3>
-      <p>Catalog setup, listing optimization and daily operations to maximize sales across marketplaces.</p>
+      <p>Catalog setup, listing optimization and daily operations to maximize sales.</p>
     </div>
 
     <div class="content-box" id="t2">
       <h3>Performance Marketing</h3>
-      <p>ROI focused Meta & Google ads with scalable growth campaigns.</p>
+      <p>ROI focused ads on Meta & Google to drive scalable conversions.</p>
     </div>
 
     <div class="content-box" id="t3">
       <h3>Business Analysis</h3>
-      <p>Reports, insights, competitor tracking and analytics to unlock predictable growth.</p>
+      <p>Reports and insights to unlock predictable growth.</p>
+    </div>
+
+    <div class="content-box" id="t4">
+      <h3>Growth Strategy</h3>
+      <p>Long term scaling plans and marketplace expansion.</p>
     </div>
 
   </div>
 
 </div>
-
 </section>
+
 
 
 <!-- IMAGE SECTION -->
@@ -926,10 +933,26 @@ document.querySelectorAll("#nav-links a").forEach(link=>{
   };
 });
 
+   /* AUTO SWITCH */
+let index = 0;
+
+setInterval(()=>{
+  if(window.innerWidth <= 900) return;
+
+  tabs[index].classList.remove('active');
+  boxes[index].classList.remove('active');
+
+  index = (index + 1) % tabs.length;
+
+  tabs[index].classList.add('active');
+  boxes[index].classList.add('active');
+},3000);
+
 </script>
 
 </body>
 </html>
+
 
 
 
