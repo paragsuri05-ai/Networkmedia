@@ -710,7 +710,8 @@ body{
 
 /* LEFT TABS */
 .gc-tabs{
-  width:360px;
+  flex:0 0 340px;   /* fixed width like Gobble */
+  min-width:280px;
   display:flex;
   flex-direction:column;
   gap:22px;
@@ -734,26 +735,28 @@ body{
 }
 
 .gc-tab.active{
-  background:linear-gradient(135deg,#00d4ff,#007bff);
-  color:white;
-  border:none;
-  box-shadow:0 12px 40px rgba(0,123,255,.5);
+  background:rgba(255,255,255,.08);   /* light glass */
+  color:#ffffff;
+  border:1px solid rgba(255,255,255,.25);
+  box-shadow:none;
 }
+
 
 /* RIGHT PANEL */
 .gc-content{
   flex:1;
-  padding:50px;
+  min-width:0;        /* ⭐ stops overflow */
+  padding:40px;
   border-radius:26px;
 
   border:1px solid rgba(255,255,255,.12);
   background:rgba(255,255,255,.03);
 
-  /* ⭐ GobbleCube inner stroke + glow */
   box-shadow:
     inset 0 0 0 1px rgba(255,255,255,.04),
     0 0 40px rgba(0,123,255,.06);
 }
+
 
 
 /* CONTENT */
@@ -761,12 +764,12 @@ body{
 .gc-box.active{display:block;}
 
 .gc-icons{
-  font-size:26px;
-  margin-bottom:20px;
+  font-size:20px;
+  margin-bottom:18px;
 }
 
 .gc-content h3{
-  font-size:42px;
+  font-size:32px;
   font-weight:700;
   margin-bottom:18px;
 }
@@ -1043,6 +1046,7 @@ document.querySelectorAll("#nav-links a").forEach(link=>{
 
 </body>
 </html>
+
 
 
 
