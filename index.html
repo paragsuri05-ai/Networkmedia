@@ -20,10 +20,11 @@ font-family:'Inter',sans-serif;
 }
 
 body{
-background:#0b1220;
-color:white;
-line-height:1.7;
-overflow-x:hidden;
+  background:#0a1f1a; /* deep seafoam dark */
+  color:white;
+  line-height:1.7;
+  overflow-x:hidden;
+}
    /* ⭐ NAVBAR space fix */
 }
 
@@ -76,7 +77,7 @@ list-style:none;
 
 nav ul li a{
 text-decoration:none;
-color:#dff9ff; /* extra light blue */
+color:#c9f7ec; /* extra light blue */
 font-size:14px;
 font-weight:500;
 transition:.25s ease;
@@ -102,9 +103,8 @@ padding:90px 10% 0;
 
 gap:70px;
 
-background:
-radial-gradient(circle at 10% 20%, #00d4ff33, transparent 40%),
-radial-gradient(circle at 80% 70%, #0066ff33, transparent 40%);
+radial-gradient(circle at 10% 20%, rgba(121,242,215,.25), transparent 45%),
+radial-gradient(circle at 80% 70%, rgba(121,242,215,.18), transparent 45%);
 }
 
 /* LEFT TEXT */
@@ -123,10 +123,10 @@ margin-bottom:22px;
 
 /* gradient highlight word */
 .highlight{
-background:linear-gradient(45deg,#00d4ff,#4f8cff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-font-weight:800;
+  background:linear-gradient(45deg,#79F2D7,#3fd9b8);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight:800;
 }
 
 /* subtitle */
@@ -155,7 +155,8 @@ display:inline-block;
 margin-top:30px;
 padding:14px 32px;
 border-radius:10px;
-background:linear-gradient(45deg,#00d4ff,#007bff);
+  background:linear-gradient(45deg,#79F2D7,#3fd9b8);
+  color:#022c22;
 color:white;
 text-decoration:none;
 font-weight:600;
@@ -193,7 +194,7 @@ margin-top:60px;
 
 .stat h3{
 font-size:46px;
-color:#00d4ff;
+color:#79F2D7;
 }
 
 /* ================= IMAGE BLOCK ================= */
@@ -789,12 +790,12 @@ body{
 
   border-radius:12px;
 
-  background:linear-gradient(45deg,#00d4ff,#007bff);
-  color:white;
+  background:linear-gradient(90deg,#79F2D7,#3fd9b8);
+  color:#022c22;
   font-weight:600;
   text-decoration:none;
 
-  box-shadow:0 8px 30px rgba(0,123,255,.5);
+  box-shadow:0 6px 20px rgba(121,242,215,.4);
 }
 
 /* MOBILE */
@@ -1046,6 +1047,7 @@ document.querySelectorAll("#nav-links a").forEach(link=>{
 
 </body>
 </html>
+
 
 
 
